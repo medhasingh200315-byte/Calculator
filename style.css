@@ -1,4 +1,6 @@
+/* --- Theme Variable Definitions --- */
 :root {
+    /* Default Theme Variables */
     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --bg-radial1: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%);
     --bg-radial2: radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%);
@@ -29,6 +31,7 @@
     --particle-bg: rgba(255, 255, 255, 0.6);
 }
 
+/* Dark Gradient Theme Overrides */
 .dark-theme {
     --bg-gradient: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
     --bg-radial1: radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
@@ -44,22 +47,16 @@
     --btn-bg: rgba(255, 255, 255, 0.05);
     --btn-border: rgba(255, 255, 255, 0.1);
     --btn-color: #fff;
-    --btn-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     --number-bg: rgba(255, 255, 255, 0.1);
     --operator-bg: linear-gradient(135deg, #ff4757, #ff3838);
-    --operator-border: rgba(255, 71, 87, 0.3);
     --clear-bg: linear-gradient(135deg, #ff6b9d, #c44569);
-    --clear-border: rgba(255, 107, 157, 0.3);
     --equals-bg: linear-gradient(135deg, #2ed573, #1e90ff);
-    --equals-border: rgba(46, 213, 115, 0.3);
-    --decimal-bg: rgba(255, 255, 255, 0.1);
     --advanced-bg: linear-gradient(135deg, #3742fa, #2f3542);
-    --advanced-border: rgba(55, 66, 250, 0.3);
     --memory-bg: linear-gradient(135deg, #ffa502, #ff6348);
-    --memory-border: rgba(255, 165, 2, 0.3);
     --particle-bg: rgba(255, 255, 255, 0.3);
 }
 
+/* Neon Theme Overrides */
 .neon-theme {
     --bg-gradient: linear-gradient(135deg, #1a001a 0%, #330066 100%);
     --bg-radial1: radial-gradient(circle at 20% 80%, rgba(255, 255, 0, 0.2) 0%, transparent 50%);
@@ -80,17 +77,13 @@
     --operator-bg: linear-gradient(135deg, #800080, #4b0082);
     --operator-border: rgba(128, 0, 128, 0.5);
     --clear-bg: linear-gradient(135deg, #ffff00, #ffea00);
-    --clear-border: rgba(255, 255, 0, 0.5);
     --equals-bg: linear-gradient(135deg, #ffff00, #d4af37);
-    --equals-border: rgba(255, 255, 0, 0.5);
-    --decimal-bg: rgba(26, 0, 26, 0.8);
     --advanced-bg: linear-gradient(135deg, #800080, #9932cc);
-    --advanced-border: rgba(128, 0, 128, 0.5);
     --memory-bg: linear-gradient(135deg, #ffea00, #ffd700);
-    --memory-border: rgba(255, 255, 0, 0.5);
     --particle-bg: rgba(255, 255, 0, 0.8);
 }
 
+/* --- Base Styling --- */
 * {
     margin: 0;
     padding: 0;
@@ -99,6 +92,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Apply main background gradient using the CSS variable */
     background: var(--bg-gradient);
     display: flex;
     flex-direction: column;
@@ -107,9 +101,11 @@ body {
     min-height: 100vh;
     margin: 0;
     overflow: hidden;
+    /* Smooth transition for theme change */
     transition: background 0.5s ease;
 }
 
+/* Background visual effects using radial gradients */
 body::before {
     content: '';
     position: absolute;
@@ -126,6 +122,7 @@ body::before {
     50% { opacity: 0.8; }
 }
 
+/* --- Theme Selector Styling --- */
 .theme-selector {
     display: flex;
     gap: 10px;
@@ -135,6 +132,7 @@ body::before {
 }
 
 .theme-btn {
+    /* Glassmorphism effect */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     color: #fff;
@@ -147,17 +145,13 @@ body::before {
     font-weight: 500;
 }
 
-.theme-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
-}
-
 .theme-btn.active {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
+/* --- Calculator Container Styling --- */
 .calculator-container {
     background: var(--calculator-bg);
     backdrop-filter: blur(20px);
@@ -168,40 +162,32 @@ body::before {
     width: 480px;
     position: relative;
     z-index: 1;
-    animation: slideIn 0.8s ease-out;
+    animation: slideIn 0.8s ease-out; /* Entrance animation */
 }
 
 @keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.calculator-header {
-    text-align: center;
-    margin-bottom: 20px;
+    from { opacity: 0; transform: translateY(50px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .calculator-title {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--title-color);
     font-size: 1.2em;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+/* --- Display Styling --- */
 #display {
     width: 100%;
     height: 80px;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--display-bg);
     backdrop-filter: blur(10px);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--display-color);
+    border: 1px solid var(--display-border);
     border-radius: 15px;
     margin-bottom: 25px;
     text-align: right;
@@ -214,25 +200,20 @@ body::before {
     box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#display:focus {
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 
-        inset 0 2px 10px rgba(0, 0, 0, 0.2),
-        0 0 20px rgba(255, 255, 255, 0.1);
-}
-
+/* --- Button Grid and Button Base Styling --- */
 .buttons {
     display: grid;
+    /* 5 columns for the calculator grid */
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     grid-template-rows: repeat(5, 1fr);
 }
 
 .btn {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--btn-bg);
     backdrop-filter: blur(10px);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-border);
     padding: 25px;
     font-size: 1.6em;
     font-weight: 600;
@@ -241,9 +222,10 @@ body::before {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--btn-shadow);
 }
 
+/* Hover effect: a subtle swipe of light across the button */
 .btn::before {
     content: '';
     position: absolute;
@@ -271,142 +253,68 @@ body::before {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.number {
-    background: rgba(255, 255, 255, 0.15);
-}
+/* --- Specific Button Styling --- */
+.number { background: var(--number-bg); }
+.decimal { background: var(--decimal-bg); }
 
-.number:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
+.operator { background: var(--operator-bg); border-color: var(--operator-border); }
+.operator:hover { background: var(--operator-bg); box-shadow: 0 10px 30px var(--operator-border); }
 
-.operator {
-    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-    border-color: rgba(255, 107, 107, 0.3);
+.clear { 
+    background: var(--clear-bg); 
+    border-color: var(--clear-border); 
+    /* Spans two rows (C and Backspace were combined) */
+    grid-row: span 2; 
 }
+.clear:hover { background: var(--clear-bg); box-shadow: 0 10px 30px var(--clear-border); }
 
-.operator:hover {
-    background: linear-gradient(135deg, #ff5252, #d63031);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
-}
-
-.clear {
-    background: linear-gradient(135deg, #fd79a8, #e84393);
-    border-color: rgba(253, 121, 168, 0.3);
-    grid-row: span 2;
-}
-
-.clear:hover {
-    background: linear-gradient(135deg, #e84393, #d63031);
-    box-shadow: 0 10px 30px rgba(253, 121, 168, 0.3);
-}
-
-.equals {
-    background: linear-gradient(135deg, #00b894, #00a085);
-    border-color: rgba(0, 184, 148, 0.3);
-    grid-column: span 1;
-    min-height: 80px;
+.equals { 
+    background: var(--equals-bg); 
+    border-color: var(--equals-border); 
     font-size: 2em;
     font-weight: 700;
 }
+.equals:hover { background: var(--equals-bg); box-shadow: 0 10px 30px var(--equals-border); }
 
-.equals:hover {
-    background: linear-gradient(135deg, #00a085, #00b894);
-    box-shadow: 0 10px 30px rgba(0, 184, 148, 0.3);
-}
+.advanced { background: var(--advanced-bg); border-color: var(--advanced-border); font-size: 1.1em; }
+.advanced:hover { background: var(--advanced-bg); box-shadow: 0 10px 30px var(--advanced-border); }
 
-.decimal {
-    background: rgba(255, 255, 255, 0.15);
-}
+.memory { background: var(--memory-bg); border-color: var(--memory-border); font-size: 1.1em; }
+.memory:hover { background: var(--memory-bg); box-shadow: 0 10px 30px var(--memory-border); }
 
-.decimal:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-.advanced {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-    border-color: rgba(108, 92, 231, 0.3);
-    font-size: 1.1em;
-}
-
-.advanced:hover {
-    background: linear-gradient(135deg, #5f3dc4, #9775fa);
-    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
-}
-
-.memory {
-    background: linear-gradient(135deg, #fd79a8, #fdcb6e);
-    border-color: rgba(253, 121, 168, 0.3);
-    font-size: 1.1em;
-}
-
-.memory:hover {
-    background: linear-gradient(135deg, #e84393, #fdcb6e);
-    box-shadow: 0 10px 30px rgba(253, 121, 168, 0.3);
-}
-
+/* --- Particle/Visual Effect Styling --- */
 .particle {
     position: absolute;
     width: 4px;
     height: 4px;
-    background: rgba(255, 255, 255, 0.6);
+    background: var(--particle-bg);
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100px) rotate(360deg);
-        opacity: 0;
-    }
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
 }
 
+/* --- Media Queries for Responsiveness --- */
 @media (max-width: 768px) {
     .calculator-container {
         width: 95%;
         max-width: 380px;
         padding: 20px;
     }
-    
-    .buttons {
-        gap: 12px;
-    }
-    
-    #display {
-        font-size: 2.2em;
-        height: 70px;
-    }
-    
-    .btn {
-        padding: 15px;
-        font-size: 1.2em;
-    }
+    .buttons { gap: 12px; }
+    #display { font-size: 2.2em; height: 70px; }
+    .btn { padding: 15px; font-size: 1.2em; }
 }
 
 @media (max-width: 480px) {
     .calculator-container {
-        width: 95%;
         padding: 15px;
     }
-    
-    .buttons {
-        gap: 10px;
-    }
-    
-    #display {
-        font-size: 2em;
-        height: 60px;
-    }
-    
-    .btn {
-        padding: 12px;
-        font-size: 1.1em;
-    }
+    .buttons { gap: 10px; }
+    #display { font-size: 2em; height: 60px; }
+    .btn { padding: 12px; font-size: 1.1em; }
 }
