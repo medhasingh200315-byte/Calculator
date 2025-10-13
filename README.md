@@ -17,9 +17,8 @@ You can input numbers and basic arithmetic operators (+, −, ×, ÷) by clickin
 
 **Action  
 
-1)Clear Display       
-    Button (C)
-    Keyboard key (Esc or C)           
+Clear Display || Button (C) ||  Keyboard key (Esc or C) 
+             
 Backspace	                  ←	            Backspace
 Calculate	                  =           	Enter or =
 Decimal                    	.            	.
