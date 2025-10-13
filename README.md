@@ -18,22 +18,20 @@ You can input numbers and basic arithmetic operators (+, −, ×, ÷) by clickin
 **Action  
 
 Clear Display || Button (C) ||  Keyboard key (Esc or C) 
-             
-Backspace	                  ←	            Backspace
-Calculate	                  =           	Enter or =
-Decimal                    	.            	.
-Toggle Sign               	±	            T or t
+Backspace	    || Button (←) ||  Keyboard key (Backspace)                                 
+Calculate	    || Button (=) ||  Keyboard key (Enter or =)
+Decimal       || Button (.) || 	Keyboard key (.)          
+Toggle Sign   || Button (±) ||	Keyboard key (T or t)            
 
 2. Advanced Functions (Scientific Mode)
 These functions operate directly on the number currently displayed in the output area.
-
-Function	                  Keyboard Key	         Description
-Square Root	                   R or r              Calculates the square root of the displayed number.
-Percentage	                   P or p	             Converts the displayed number to a percentage (divides by 100).
-Power	                         S or s              Calculates the square of the displayed number.
-Factorial	                     F or f	             Calculates the factorial of the displayed integer (n!).
-Reciprocal	                   I or i              Calculates the inverse of the displayed number (1÷x).
-Pi	                          	None	             Appends the value of Pi (≈3.14159...) to the expression.
+                          
+Square Root	  ||     Keyboard Key	 (R or r)      ||    Description  Calculates the square root of the displayed number.
+Percentage	  ||     Keyboard Key	 (P or p)	     ||    Description Converts the displayed number to a percentage (divides by 100).
+Power	        ||     Keyboard Key  (S or s)      ||    Description Calculates the square of the displayed number.
+Factorial	    ||     Keyboard Key	 (F or f)	     ||    Description Calculates the factorial of the displayed integer (n!).
+Reciprocal	  ||     Keyboard Key	 (I or i)      ||    DescriptionCalculates the inverse of the displayed number (1÷x).
+Pi	          ||     Keyboard Key		(None)       ||    DescriptionAppends the value of Pi (≈3.14159...) to the expression.
 
 3. Understanding and Using Memory Functions 🧠
 The Memory functions allow you to store and manipulate a single running total (Memory Value) without affecting your current calculation. A small 'M' indicator will appear at the top-right of the screen when a non-zero value is stored in memory.
