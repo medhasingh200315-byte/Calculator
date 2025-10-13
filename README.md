@@ -15,8 +15,9 @@ Keyboard Support: Use your physical keyboard for lightning-fast calculations.
 1. Basic Operations
 You can input numbers and basic arithmetic operators (+, −, ×, ÷) by clicking the buttons or using your keyboard.
 
-Action                    	Button	     Keyboard Key
-Clear Display             	C	            Esc or C
+Action                    	
+1)Clear Display       
+    Button (C)        Keyboard key (Esc or C)           
 Backspace	                  ←	            Backspace
 Calculate	                  =           	Enter or =
 Decimal                    	.            	.
