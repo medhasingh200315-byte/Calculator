@@ -27,10 +27,15 @@ Toggle Sign   || Button (±) ||	Keyboard key (T or t)
 These functions operate directly on the number currently displayed in the output area.
                           
 Square Root	  ||     Keyboard Key	 (R or r)      ||    Description  Calculates the square root of the displayed number.
+
 Percentage	  ||     Keyboard Key	 (P or p)	     ||    Description Converts the displayed number to a percentage (divides by 100).
+
 Power	        ||     Keyboard Key  (S or s)      ||    Description Calculates the square of the displayed number.
+
 Factorial	    ||     Keyboard Key	 (F or f)	     ||    Description Calculates the factorial of the displayed integer (n!).
+
 Reciprocal	  ||     Keyboard Key	 (I or i)      ||    DescriptionCalculates the inverse of the displayed number (1÷x).
+
 Pi	          ||     Keyboard Key		(None)       ||    DescriptionAppends the value of Pi (≈3.14159...) to the expression.
 
 3. Understanding and Using Memory Functions 🧠
