@@ -41,11 +41,15 @@ Pi	          ||     Keyboard Key		(None)       ||    DescriptionAppends the valu
 3. Understanding and Using Memory Functions 🧠
 The Memory functions allow you to store and manipulate a single running total (Memory Value) without affecting your current calculation. A small 'M' indicator will appear at the top-right of the screen when a non-zero value is stored in memory.
 
-Button	         Function Name	         How It Works
-MC	              Memory Clear	         Resets the Memory Value back to 0.
-MR	              Memory Recall	         Inserts the Memory Value into the current calculation/display.
-M+	              Memory Add	           Calculates the result of the current expression on the display and adds it to the Memory Value.
-M-	              Memory Subtract	       Calculates the result of the current expression on the display and subtracts it from the Memory Value.
+
+MC	  ||            Memory Clear	   ||      Resets the Memory Value back to 0.
+
+MR	  ||             Memory Recall	 ||        Inserts the Memory Value into the current calculation/display.
+
+M+	  ||            Memory Add	     ||      Calculates the result of the current expression on the display and adds it to the Memory Value.
+
+M-	  ||            Memory Subtract	 ||     Calculates the result of the current expression on the display and subtracts it from the Memory Value.
+
 
 4. Example Workflow for Memory:
 
