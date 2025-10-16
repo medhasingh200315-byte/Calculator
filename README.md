@@ -18,9 +18,13 @@ You can input numbers and basic arithmetic operators (+, −, ×, ÷) by clickin
 **Action  
 
 Clear Display || Button (C) ||  Keyboard key (Esc or C) 
-Backspace	    || Button (←) ||  Keyboard key (Backspace)                                 
+
+Backspace	    || Button (←) ||  Keyboard key (Backspace)     
+
 Calculate	    || Button (=) ||  Keyboard key (Enter or =)
-Decimal       || Button (.) || 	Keyboard key (.)          
+
+Decimal       || Button (.) || 	Keyboard key (.)       
+
 Toggle Sign   || Button (±) ||	Keyboard key (T or t)            
 
 2. Advanced Functions (Scientific Mode)
